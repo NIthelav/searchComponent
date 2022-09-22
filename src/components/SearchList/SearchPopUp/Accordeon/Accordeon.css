@@ -1,0 +1,25 @@
+.accordeon {
+  width: 100%;
+  display: flex;
+  padding: 7px;
+  position: relative;
+}
+
+.accordeon__button {
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.accordeon__button_active {
+  transform: rotate(225deg);
+}
+
+.accordeon__name {
+  padding-left: 20px;
+}
