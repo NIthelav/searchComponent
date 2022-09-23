@@ -1,0 +1,21 @@
+.tag {
+  display: flex;
+  align-items: center;
+}
+
+.tag_type_list .tag__text {
+  margin-left: 10px;
+}
+
+.tag_type_item {
+  margin: 5px;
+}
+
+.tag_type_item .tag__text {
+  padding: 0 10px;
+}
+
+.tag__checkbox {
+  width: 20px;
+  height: 20px;
+}

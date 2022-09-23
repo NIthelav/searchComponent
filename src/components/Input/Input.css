@@ -1,0 +1,18 @@
+.input {
+  cursor: copy;
+  min-height: 40px;
+  width: 400px;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.input__input {
+  padding: 5px;
+  font-size: 1.2em;
+  background: transparent;
+  border: none;
+  outline: 0;
+}

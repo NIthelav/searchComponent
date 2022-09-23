@@ -4,11 +4,11 @@ import React, {
   ReactElement,
   useState,
   useEffect,
-  useCallback,
   ReactNode,
 } from "react";
-import { cn } from "../../../../util/cn";
 import { useToggle } from "../../../../hooks/useToggle";
+import { Tag, TagType } from "./Tag/Tag";
+import { cn } from "../../../../util/cn";
 import "./Accordeon.css";
 
 const cls = cn("accordeon");
@@ -21,12 +21,14 @@ interface AccordeonProps {
     | ReactElement<AccordeonProps>
     | ReactElement<AccordeonProps>[]
     | null;
+  onClickTag: (tag: string, type: TagType) => void;
 }
 
 export const Accordeon: FC<AccordeonProps> = ({
   name,
   isOpened,
   style,
+  onClickTag,
   children,
 }) => {
   const [active, setActive] = useState(isOpened);
@@ -34,9 +36,11 @@ export const Accordeon: FC<AccordeonProps> = ({
   const onToggle = useToggle(setActive);
   return (
     <>
-      <div style={style} className={cls()} onClick={onToggle}>
-        {!!children && <div className={cls("button", { active })}></div>}
-        <p className={cls("name")}>{name}</p>
+      <div style={style} className={cls()}>
+        {!!children && (
+          <div className={cls("button", { active })} onClick={onToggle} />
+        )}
+        <Tag className={cls("name")} name={name} onClick={onClickTag} />
       </div>
       {active && children}
     </>

@@ -1,7 +1,7 @@
 .searchList {
-  --search-width: 30vw;
+  --search-width: 400px;
   --search-padding: 15px;
-  --serch-input-height: 30px;
+  --serch-input-height: 40px;
   width: var(--search-width);
   padding: var(--search-padding);
   display: flex;

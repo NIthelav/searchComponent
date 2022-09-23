@@ -1,5 +1,12 @@
 .searchInput {
+  display: flex;
   width: var(--search-width);
   min-height: var(--serch-input-height);
-  font-size: 1.2em;
+}
+
+.searchInput__tag {
+  width: fit-content;
+  height: var(--serch-input-height);
+  background-color: rgb(180, 180, 180);
+  border-radius: 5px;
 }
