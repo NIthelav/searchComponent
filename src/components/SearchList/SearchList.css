@@ -1,0 +1,11 @@
+.searchList {
+  --search-width: 30vw;
+  --search-padding: 15px;
+  --serch-input-height: 30px;
+  width: var(--search-width);
+  padding: var(--search-padding);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+}

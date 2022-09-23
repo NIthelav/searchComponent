@@ -1,0 +1,9 @@
+.searchAccordeons {
+  position: absolute;
+  top: calc(var(--serch-input-height) + var(--search-padding) * 2);
+  left: var(--search-padding);
+  width: var(--search-width);
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

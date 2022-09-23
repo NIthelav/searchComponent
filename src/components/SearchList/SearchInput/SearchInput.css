@@ -1,0 +1,5 @@
+.searchInput {
+  width: var(--search-width);
+  min-height: var(--serch-input-height);
+  font-size: 1.2em;
+}

@@ -6,14 +6,15 @@
 }
 
 .accordeon__button {
-  width: 10px;
-  height: 10px;
+  --size: 10px;
+  width: var(--size);
+  height: var(--size);
   border-bottom: 2px solid black;
   border-right: 2px solid black;
   transform: rotate(45deg);
   position: absolute;
   left: 0;
-  top: 50%;
+  top: calc(50% - var(--size) / 2);
 }
 
 .accordeon__button_active {

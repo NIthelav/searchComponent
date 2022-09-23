@@ -1,8 +1,9 @@
 import React, { FC, useCallback } from "react";
 import { RegionProps } from "../../../typings/RegionProps";
 import { Accordeon } from "./Accordeon/Accordeon";
-import { Marked } from "./Marked";
+import { Marked } from "./Marked/Marked";
 import { cn } from "../../../util/cn";
+import "./SearchAccordeons.css";
 
 const cls = cn("searchAccordeons");
 
@@ -30,7 +31,7 @@ export const SearchAccardeons: FC<SearchAccordeonProps> = ({
   const drawRegions = useCallback(
     (regions: RegionProps[], searched: string = "", margin: number = 0) => {
       return regions.map((region) => {
-        const isFiltered = filterRegion(region, searched);
+        const isFiltered = filterRegion(region, searched) && searched !== "";
         return (
           <Accordeon
             style={{ marginLeft: margin + "px" }}
@@ -45,5 +46,5 @@ export const SearchAccardeons: FC<SearchAccordeonProps> = ({
     [filterRegion]
   );
 
-  return <>{drawRegions(regions, searched)}</>;
+  return <div className={cls()}>{drawRegions(regions, searched)}</div>;
 };
