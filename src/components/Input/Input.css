@@ -1,5 +1,5 @@
 .input {
-  cursor: copy;
+  cursor: text;
   min-height: 40px;
   width: 400px;
   display: flex;
